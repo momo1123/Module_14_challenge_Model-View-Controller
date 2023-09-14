@@ -4,31 +4,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fund My Project!</title>
+  <title>ChatSMU</title>
   <link rel="stylesheet" href="/css/jass.css">
   <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
+  
+</div>
   <div class="flex-column justify-space-around">
     <header class="display-flex justify-space-between align-center p-2">
       <h1>
         <span role="img" aria-label="money">💸</span>
-        <a href="/">Fund My Project!</a>
+        <a href="/">ChatSMU</a>
       </h1>
       <nav>
+        <a class="navbar navbar-expand-lg active px-3 " href="/dashboard">Dashboard</a>
+
+        <a class="navbar navbar-expand-lg active px-3 " href="/Home">Home</a>
+        
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-        <a href="/profile">profile</a> |
+        <a class=" px-3" href="/profile">profile</a> |
         <button class="no-button" id="logout">logout</button>
         {{else}}
-        <a href="/login">login</a>
+        <a class=" px-3" href="/login">Login</a>
         {{/if}}
+
       </nav>
     </header>
     <main class="container container-fluid mt-5">
       <!-- Render the sub layout -->
-      {{{ body }}}
+      {{!-- {{{ body }}}  this outpusts the project name  --}}
+      <div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Email address</label>
+  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+  
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label">Username</label>
+  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+</button>
+<button type="button" class="btn btn-secondary btn-sm">Post</button>
     </main>
     <footer>
       
